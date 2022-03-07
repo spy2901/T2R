@@ -1,0 +1,42 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-color: #edf7ee;
+}
+
+div {
+    width: 500px;
+    margin: 200px auto; /* odvajamo 200px sa gornje i donje strane forme, a podjednako (auto) za levu i desnu stranu */ 
+    text-align: center;
+    background-color: #cae8cb;
+    border: 1px solid #4CAF50;
+    padding: 20px;
+}
+z
+/* primenjujemo stil nad svim input elementima, možemo zajednički stil napisati ovde ili pisati duplirano za svaki input */
+input {
+    height: 30px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    border: 1px solid #cae8cb;
+}
+
+/* primenjujemo naredni stil samo nad input-ima koji su tipa (type) text ili tipa password */
+input[type="text"], input[type="password"] {
+    width: 100%;
+    margin-bottom: 10px; /* odvoji 10px ispod ovog elementa (napravi razmak ispod) */
+}
+
+/* navodimo tip (type) input-a jer ne želimo da se ovaj stil primeni i nad drugim input-ima na stranici */
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    cursor: pointer; /* menjamo izgled miša kada interaguje sa ovim elementom (ručica koja pokazuje) */
+}
+
+input[type="submit"]:hover {
+    /* prilikom prevlačenja miša iznad submit dugmeta menjamo njegov izgled */
+    background-color: #edf7ee;
+    color: #4CAF50;
+    border: 1px solid #4CAF50;
+}

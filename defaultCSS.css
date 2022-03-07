@@ -1,0 +1,18 @@
+body{
+    background-image: url("https://assets.dicebreaker.com/ticket-to-ride-europe-15-anniversary-edition-layout.png/BROK/thumbnail/1600x900/quality/100/ticket-to-ride-europe-15-anniversary-edition-layout.png");
+}
+#logout a:visited{
+    color: darkorange;
+}
+a:visited a:active{
+    color: orange;
+}
+#logout1{
+    background-color: orange;
+    width: 50px;
+    height: 17px;
+    text-align: center;
+    color: black;
+    justify-content: center;
+    margin: 200px auto;
+}

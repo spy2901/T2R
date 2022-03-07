@@ -1,0 +1,36 @@
+#tabela{
+    color: whitesmoke;
+}
+body{
+    font-family: sans-serif;
+    text-align: center;
+
+}
+table{
+    margin: 100px auto;
+}
+
+table,th,td{
+    padding: 8px;
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: white;
+    color: black;
+
+}
+
+th{
+    color: white;
+    background-color: #3399ff;
+}
+
+tr:nth-child(even){
+    background-color: black;
+    color: white;
+    /**/
+}
+
+h1{
+    color: antiquewhite;
+}
+

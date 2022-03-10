@@ -28,10 +28,10 @@
         return mysqli_fetch_all($rezultat, MYSQLI_ASSOC);
     
     }
-    function registruj_korisnika($korisnicko_ime, $sifra) {
+    function registruj_korisnika($korisnicko_ime, $sifra,$usertype) {
         global $konekcija;
     
-        $sqlUpit = "SELECT * FROM login WHERE username = '$korisnicko_ime'";
+        $sqlUpit = "SELECT *FROM login WHERE username = '$korisnicko_ime'";
         $rezultat = mysqli_query($konekcija, $sqlUpit);
         if ($rezultat == false) {
             die('Doslo je do greske pri registraciji korisnika');
@@ -41,7 +41,7 @@
             return false;
         }
     
-        $sqlUpit = "INSERT INTO login VALUES(NULL,'$korisnicko_ime', '$sifra')";
+        $sqlUpit = "INSERT INTO login VALUES(NULL,'$korisnicko_ime', '$sifra','$usertype')";
         $rezultat = mysqli_query($konekcija, $sqlUpit);
         if ($rezultat == false) {
             die('Doslo je do greske pri registraciji korisnika');

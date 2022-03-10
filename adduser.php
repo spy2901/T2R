@@ -1,4 +1,3 @@
-
 <?php
     session_start();
     if(!isset($_SESSION["username"])){
@@ -13,18 +12,19 @@
 
         $korisnicko_ime = $_POST['k_ime'];
         $sifra = $_POST['k_sifra'];
+        $usertype = $_POST['type'];
 
-        $rezultat = registruj_korisnika($korisnicko_ime, $sifra);
+        $rezultat = registruj_korisnika($korisnicko_ime, $sifra,$usertype);
         if ($rezultat == true) {
             header('Location: adduser.php');
         } else {
             $greska = "Vec postoji takav korisnik u nasoj bazi";
         }
     }
+
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -44,7 +44,7 @@
             <a href="adduser"class="active">Dodaj usera</a>
             <a href="adminhome.php" ><i class="fa-solid fa-user-gear"></i>Home</a>
     </div>
-    <form method="POST">
+        <form method="POST">
             <table>
                 <tr>
                     <td>Korisnicko ime</td>
@@ -54,7 +54,10 @@
                     <td>Sifra</td>
                     <td><input type="password" name="k_sifra" required placeholder="Vasa sifra" /></td>
                 </tr>
-                
+                <tr>
+                    <td> <INPUT TYPE="Radio" Name="type" Value="user"checked>user</td>
+                    <td><INPUT TYPE="Radio" Name="type" Value="admin">admin</td>
+                </tr>
                 <tr>
                     <td colspan="2"><input type="submit" value="Registruj se" /></td>
                 </tr>
@@ -67,5 +70,5 @@
                 }
             ?>
         </div>
-</body>
+    </body>
 </html>

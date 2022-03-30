@@ -1,0 +1,15 @@
+body{
+    margin: 0;
+}
+
+.DodajVrstIgre{
+    margin: auto 200;
+    padding-top: 150px;
+}
+#imeIgre{
+    top: 100px;
+}
+
+.labele{
+    color: antiquewhite;
+}
